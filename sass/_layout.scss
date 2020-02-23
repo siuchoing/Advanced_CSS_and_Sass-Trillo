@@ -29,11 +29,19 @@
   flex: 0 0 18%;                                      // NO flex-grow if there are some space;
                                                       // No shirk if there are not enough space
                                                       // 18% of sidebar width
+
+  // Move side-nav__item on the top, and legal text on the bottom
+  display: flex;
+  flex-direction: column;                             // vertically
+  justify-content: space-between;
 }
 
 .hotel-view {
-  //background-color: #fff;
+  background-color: #fff;
+
+  //TEST
   background-color: orangered;
+  height: 80rem;
 
   flex: 1;                                            // flex element will grow as mush as it can
 }
