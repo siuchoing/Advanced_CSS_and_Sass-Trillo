@@ -71,6 +71,21 @@
 // USER NAVIGATION
 .user-nav {
   background-color: greenyellow;
+  align-self: stretch;                                    // To stretch the icon boxes vertically
+
+  display: flex;                                          // To turn this into a flex container
+  align-items: center;
+
+  // Create icon boxes for div>.user-nav__icon-box * 3
+  & > * {
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+  }
+
+  & > *:hover {
+    background-color: var(--color-grey-light-2);
+  }
 
   &__icon-box {
 
