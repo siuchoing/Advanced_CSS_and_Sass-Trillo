@@ -39,9 +39,6 @@
 .hotel-view {
   background-color: #fff;
 
-  //TEST
-  height: 80rem;
-
   flex: 1;                                            // flex element will grow as mush as it can
 }
 
@@ -54,7 +51,10 @@
 }
 
 .description {
-  background-color: orangered;
+  font-size: 1.4rem;
+  background-color: #fff;
+  box-shadow: var(--shadow-line);
+  padding: 3rem;
   flex: 0 0 60%;
   margin-right: 4.5rem;
 }
