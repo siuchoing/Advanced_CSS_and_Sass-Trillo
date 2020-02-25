@@ -41,6 +41,10 @@
       outline: none;                                      // without border
       width: 100%;
       background-color: var(--color-grey-light-3);
+
+      @media only screen and (max-width: $bp-smallest) {
+        background-color: var(--color-grey-light-2);
+      }
     }
 
     // To change the placeholder text
