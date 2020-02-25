@@ -134,12 +134,26 @@
   list-style: none;
   margin-top: 3.5rem;
 
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    margin: 0;
+  }
+
   // Related to the pseudo-element
   &__item {
     position: relative;
 
     &:not(:last-child) {
       margin-bottom: .5rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        margin: 0;
+      }
+    }
+
+    // all flex items will grow, and occupy this entire width.
+    @media only screen and (max-width: $bp-medium) {
+      flex: 1;
     }
   }
 
@@ -187,6 +201,12 @@
     // Solved - <svg> and <span> are not well aligned, where <svg> is a little bit before <span>
     display: flex;
     align-items: center;
+
+    // Move svg and link text to center
+    @media only screen and (max-width: $bp-medium) {
+      justify-content: center;
+      padding: 2rem;
+    }
   }
 
   &__link:hover {
@@ -209,6 +229,11 @@
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem;
+
+  // hidden legal text
+  @media only screen and (max-width: $bp-medium) {
+    display: none;
+  }
 }
 
 
@@ -414,8 +439,9 @@
     margin-right: auto;
   }
 
+  // let friends photo side by side
   &__friends {
-
+    display: flex;
   }
 
   &__photo {
@@ -447,6 +473,12 @@
 
   // Fix image overflow
   overflow: hidden;
+
+  // Decrease padding and margin
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
 
   &__text {
     margin-bottom: 2rem;
@@ -511,6 +543,11 @@
 .cta {
   padding: 3.5rem 0;
   text-align: center;
+
+  // Decrease padding
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2.5rem 0;
+  }
 
   &__book-now {
     fone-size: 2rem;
