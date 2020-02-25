@@ -461,11 +461,16 @@
 
     // For Newer browsers - masks approach (best method)
     // Fix background color cannot change color in css
-    background-color: var(--color-primary);
-    -webkit-mask-image: url(../img/chevron-thin-right.svg);   // Apply mask approach
-    -webkit-mask-size: cover;                                 // To look through element, and see background color in the area
-    mask-image: url(../img/chevron-thin-right.svg);
-    mask-size: cover;                                         // Fix the icon is too big
+    //@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+    @supports (-webkit-mask-image: url("")) or (mask-image: url("")) {
+      background-color: var(--color-primary);
+      -webkit-mask-image: url(../img/chevron-thin-right.svg);   // Apply mask approach
+      -webkit-mask-size: cover;                                 // To look through element, and see background color in the area
+      mask-image: url(../img/chevron-thin-right.svg);
+      mask-size: cover;                                         // Fix the icon is too big
+      background-image: none;
+    }
+
   }
 }
 
