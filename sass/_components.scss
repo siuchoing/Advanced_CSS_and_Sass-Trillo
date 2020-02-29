@@ -438,6 +438,41 @@
   }
 }
 
+///////////////////////////////////
+
+// LEGAL TEXT - SMALLER SCREENS
+
+.legal-small {
+
+  font-size: 1.2rem;
+
+  color: var(--color-grey-light-4);
+
+  text-align: center;
+
+  padding: 2.5rem;
+
+  background-color: var(--color-grey-dark-1);
+
+  // this is what happens below 2000px
+
+  @media only screen and (max-width: $bp-bigscreen) {
+
+    display: none;
+
+  }
+
+  // this is what happens below 900px
+
+  @media only screen and (max-width: $bp-medium) {
+
+    display: flex;
+
+    justify-content: center;
+
+  }
+}
+
 
 //////////////////////////////////////
 // GALLERY
